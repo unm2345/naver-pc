@@ -1,0 +1,90 @@
+@charset "UTF-8";
+body {
+  min-width: 1190px;
+  font-family: "Malgun Gothic","맑은 고딕",helvetica,sans-serif;
+  color: #202020;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.thumb_bd {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb_bd::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sc_post .group_cont .cont ul li a .thumb_bd img,
+.sc_shop .group_products .list_area ul li a .thumb_bd img,
+.sc_shop .group_plus .list_area ul li a .thumb_bd img,
+footer .banner_area ul li a .thumb_bd img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sc_post .group_cont .cont ul li a:hover .thumb_bd img,
+.sc_shop .group_products .list_area ul li a:hover .thumb_bd img,
+.sc_shop .group_plus .list_area ul li a:hover .thumb_bd img,
+footer .banner_area ul li a:hover .thumb_bd img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+header .logo,
+header .searh_area .submit::after,
+header .service_area a.link_set::after,
+header .service_area a.link_junior::after,
+header .service_area a.link_bin::after,
+header .gnb ul li a.ico_mail::before,
+header .gnb ul li a.ico_shop::before,
+header .gnb ul li a.ico_live::before,
+header .gnb ul li a.ico_tv::before,
+header .group_gnb > .more::after,
+.sc_news .group_issue .hot_issue_area .media::after,
+.sc_news .group_stand .title_area h3 a::before,
+.sc_news .group_stand .title_area h3 a::after,
+.sc_news .group_stand .title_area .set_area a,
+.sc_post .group_title .set_area button::before,
+.sc_post .group_theme .btn::after,
+.sc_post .group_cont .btn_area button::before,
+.sc_post .group_cont .cont.cont03 .title::after,
+.sc_login .link_login::before,
+.sc_login .link_area a.link_id::before,
+.sc_login .link_area a.link_join::before,
+.board_area .navi .btn::after,
+footer .sc_notice .link_service::after {
+  background-image: url(../imgs/sp_main_bg.png);
+  background-repeat: no-repeat;
+  background-size: 457px auto;
+}
+
+header .group_weather .current::before {
+  background-image: url(../imgs/sp_weather_time.png);
+  background-repeat: no-repeat;
+  background-size: 215px auto;
+}
+
+.sc_shop .group_title h2 a::before,
+.sc_shop .group_title h2 a::after,
+.sc_shop .navi_area .btn::after {
+  background-image: url(../imgs/sp_shop_bg.png);
+  background-repeat: no-repeat;
+  background-size: 107px auto;
+}

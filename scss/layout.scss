@@ -1,0 +1,568 @@
+@import './mixin';
+
+@import url("./reset.css");
+@import url("./common.css");
+
+.inr{
+  position: relative;
+  width: 1130px;
+  height: 100%;  
+  margin: 0 auto;
+}
+
+// header
+header{
+  // logo_area 영역
+  .logo_area{
+    position: relative;
+    height: 160px;
+    border-bottom: 1px solid #e4e8eb;
+  }
+
+  // logo 영역
+  .logo{
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    margin-top: -32px;
+    
+    width: 222px;
+    height: 52px;
+    background-position: 0 -158px;
+
+    a{
+      display: block;
+      height: 100%;
+    }
+  }
+
+  // searh_area 영역
+  .searh_area{
+    position: absolute;
+    top: 50%;
+    left: 238px;
+
+    width: 582px;
+    height: 52px;    
+    margin-top: -28px;
+    border: 2px solid #19ce60;
+    border-radius: 2px;
+
+    @include cf;
+
+    input{
+      &[type="text"]{
+        float: left;
+
+        width: 444px;
+        height: 24px;
+        padding: 14px 16px;
+        outline: 0;
+
+        color: #000;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+    }
+
+    .submit{
+      position: relative;
+      float: right;      
+      width: 54px;
+      height: 52px;
+      background-color: #19ce60;
+
+      &::after{
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        background-position: -420px 0;
+        vertical-align: top;
+      }
+    }
+  }
+
+  // service_area 영역
+  .service_area{
+    position: absolute;
+    top: 12px; right: -3px;
+    @include cf;
+
+    a{
+      float: left;
+      font-size: 11px;
+
+      &.link_set:hover{
+        text-decoration: underline;
+      }
+
+      &.link_set::after{
+        content: '';
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        margin: -3px 0 0 3px;
+        background-position: -308px -345px;
+        vertical-align: top;
+      }
+
+      &.link_junior::before{
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 10px;
+        margin: 3px 3px 3px 7px;
+        background-color: #e4e8eb;
+      }      
+
+      &.link_junior::after{
+        content: '';
+        display: inline-block;
+        width: 60px;
+        height: 10px;
+        margin: 3px;
+        background-position: -262px -330px;
+        background-repeat: no-repeat;
+        vertical-align: top;
+      }
+      &.link_junior:hover::after{
+        background-position: -200px -330px;
+      }
+
+      &.link_bin::after{        
+        content: '';
+        display: inline-block;
+        width: 34px;
+        height: 11px;
+        margin: 3px 3px 3px 9px;
+        background-position: -369px -299px;
+        background-repeat: no-repeat;
+        vertical-align: top;        
+      }
+      &.link_bin:hover::after{
+        background-position: -380px -199px;
+      }
+    }
+  }
+
+  // gnb_area 영역 
+  .gnb_area{
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+
+    .inr{
+      @include cf;
+    }
+  }
+
+  // gnb 영역
+  .group_gnb{
+    float: left;
+    padding: 11px 0;
+
+    > .more{
+      float: left;
+      margin-left: 17px;
+      font-size: 13px;
+      line-height: 30px;
+      color: #202020;
+      text-align: right;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &::after{
+        content: '';
+        display: inline-block;
+        width: 11px;
+        height: 7px;
+        margin-left: 7px;
+
+        background-position: -444px -330px;
+        vertical-align: 2px;
+      }
+    }
+  }  
+  
+  .gnb{
+    float: left;
+    ul{
+      float: left;
+  
+      &.gnb02{
+        margin-left: 12px;
+      }
+  
+  
+      li{
+        float: left;
+        + li{
+          margin-left: 12px;
+        }
+  
+        a{
+          display: block;
+          font-size: 15px;
+          line-height: 30px;
+          font-weight: bold;
+  
+          &.ico_mail::before{
+            content: '';
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            margin: 3px 9px 0 0;
+  
+            background-position: -420px -73px;
+            vertical-align: top;
+          }
+  
+          &.ico_shop::before{
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 20px;
+            margin: 5px 0;
+  
+            background-position: -154px -389px;
+            vertical-align: top;
+          }
+  
+          &.ico_live::before{
+            content: '';
+            display: inline-block;
+            width: 54px;
+            height: 20px;
+            margin: 5px 0 ;          
+  
+            background-position: -202px -299px;
+            vertical-align: top;
+          }
+  
+          &.ico_tv::before{
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 14px;
+            margin: 9px 2px 0 0;
+  
+            background-position: -444px -49px;
+            vertical-align: top;
+          }
+        }
+      }
+  
+      &.gnb01{
+        li a{
+          color: #03c75a;
+        }
+      }
+    }
+  }
+
+  // weather 영역
+  .group_weather{
+    float: right;
+    padding: 12px 0 11px;
+
+    line-height: 29px;
+    font-size: 13px;
+
+    
+    a{
+      display: block;
+      overflow: hidden;
+    }
+
+    span{
+      float: left;
+      font-size: 13px;
+      color: grey;
+    }
+
+    .current{
+      color: #202020;
+      font-weight: bold;
+
+      &::before{
+        content: '';
+        float: left;
+        width: 29px;
+        height: 29px;
+        margin-right: 9px;
+        background-position: -155px 0;
+        vertical-align: top;
+      }
+
+      em{
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    }
+    .min{
+      margin: 0 3px 0 9px;
+      color: #2586ee;
+    }
+    .max{
+      margin-left: 3px;
+      color: #e9564a;
+    }    
+    .location{      
+      font-size: 12px;
+      margin-left: 9px;      
+      text-align: right;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// footer
+footer{
+  padding-bottom: 92px;
+  background-color: #fafbfc;
+  border-top: 1px solid #e4e8eb;
+
+  // banner_area 영역
+  .banner_area{
+    padding: 24px 0;
+    border-bottom: 1px solid #e4e8eb;    
+    
+    ul{
+      overflow: hidden;
+
+      li{
+        float: left;
+        width: 350px;
+
+        +li{
+          margin-left: 40px;
+        }
+
+        a{
+          display: block;
+          overflow: hidden;
+          
+          &:hover strong{
+            text-decoration: underline;
+          }
+        }
+
+        .img{
+          float: left;
+          width: 160px;
+          height: 86px;
+          
+          img{
+            width: 100%;
+          }
+        }
+
+        .text{
+          overflow: hidden;
+          padding: 2px 2px 0 16px;
+          font-size: 12px;
+          line-height: 1.25;
+        }
+
+        em{
+          display: block;
+          color: #58c464;
+          font-weight: 700;
+          letter-spacing: -0.25px;
+
+          @include ellipsis;
+        }
+
+        strong{
+          display: block;
+          margin-top: 6px;
+
+          color: #242424;
+          font-size: 13px;
+          line-height: 1.25;
+          font-weight: bold;
+          letter-spacing: -0.26px;
+
+          @include ellipsis;
+        }
+        p{
+          margin-top: 8px;
+          color: #424242;
+          line-height: 18px;
+          letter-spacing: -0.25px;
+
+          @include ellipsis(2);
+        }
+      }
+    }
+  }
+
+  // sc_notice 영역
+  .sc_notice{
+    overflow: hidden;
+    padding: 16px 0 15px;
+    border-bottom: 1px solid #e4e8eb;
+
+    h3{
+      float: left;
+      font-weight: bold;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    .link_service{
+      float: right;
+      font-weight: bold;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &::after{
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 12px;
+        margin-left: 10px;
+        background-position: -444px -268px;
+        vertical-align: -2px;
+      }
+    }
+  }
+
+  // sc_partners 영역
+  .row{
+    overflow: hidden;
+    border-bottom: 1px solid #e4e8eb;
+  }
+
+  .sc_partners{
+    float: left;
+    padding: 20px 0;
+
+    .list_area{
+      overflow: hidden;
+
+      + .list_area{
+        margin-top: 9px;
+      }
+
+      h3{
+        float: left;
+        width: 87px;
+        font-weight: bold;
+      }
+
+      ul{
+        float: left;
+        li{
+          float: left;
+
+          +li::before{
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 11px;
+            margin: 0 8px;
+            background-color: #e4e8eb;
+            vertical-align: -1px;
+          }
+
+          a{
+            color: #777;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // project_area 영역
+  .project_area{
+    float: right;
+    padding: 28px 0;
+
+    .project{
+      float: left;
+      max-width: 150px;
+      margin-right: 50px;
+
+      img{
+        float: right;
+        width: 48px;
+        height: 48px;
+      }
+  
+      .text{
+        float: left;  
+        margin-right: 12px;      
+      }
+
+      p{
+        padding: 2px 0;
+        font-weight: bold;
+        @include ellipsis;
+      }
+
+      a{
+        color: grey; 
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+
+  .sc_policy{
+    overflow: hidden;
+    padding-top: 25px;
+    ul{
+      float: left;
+
+      li{
+        float: left;
+
+        + li::before{
+          content: '';
+          display: inline-block;
+          width: 1px;
+          height: 11px;
+          margin: 0 8px;
+
+          background: #e4e8eb;
+          vertical-align: -1px;
+        }
+
+        a{
+          color: #777;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+
+        em{
+          font-weight: bold;
+        }
+      }
+    }
+
+    address{
+      float: left;
+      margin-left: 13px;
+      font-weight: bold;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
