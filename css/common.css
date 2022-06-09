@@ -11,9 +11,9 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .thumb_bd {
@@ -35,7 +35,6 @@ body {
 .sc_shop .group_products .list_area ul li a .thumb_bd img,
 .sc_shop .group_plus .list_area ul li a .thumb_bd img,
 footer .banner_area ul li a .thumb_bd img {
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -43,8 +42,7 @@ footer .banner_area ul li a .thumb_bd img {
 .sc_shop .group_products .list_area ul li a:hover .thumb_bd img,
 .sc_shop .group_plus .list_area ul li a:hover .thumb_bd img,
 footer .banner_area ul li a:hover .thumb_bd img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 header .logo,
